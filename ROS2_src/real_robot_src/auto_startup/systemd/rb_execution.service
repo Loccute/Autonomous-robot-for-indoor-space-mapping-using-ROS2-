@@ -1,0 +1,15 @@
+# THIS IS A GENERATED FILE, NOT RECOMMENDED TO EDIT.
+
+[Unit]
+Description="bringup rb_execution"
+Wants=network-online.target
+After=rb_navigation.service
+
+[Service]
+Type=simple
+ExecStart=/usr/sbin/rb_execution-start
+TimeoutStopSec=1
+KillSignal=SIGKILL
+
+[Install]
+WantedBy=multi-user.target

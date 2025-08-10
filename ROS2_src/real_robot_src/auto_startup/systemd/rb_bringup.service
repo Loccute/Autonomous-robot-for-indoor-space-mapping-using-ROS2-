@@ -1,0 +1,15 @@
+# THIS IS A GENERATED FILE, NOT RECOMMENDED TO EDIT.
+
+[Unit]
+Description="bringup rb_bringup"
+After=network.target
+
+[Service]
+User=tai
+Type=simple
+ExecStart=/usr/sbin/rb_bringup-start
+TimeoutStopSec=1
+KillSignal=SIGKILL
+
+[Install]
+WantedBy=multi-user.target
